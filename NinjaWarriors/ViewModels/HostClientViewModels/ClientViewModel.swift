@@ -152,3 +152,13 @@ extension ClientViewModel {
         return shape.halfLength
     }
 }
+
+extension ClientViewModel {
+    var timeRemaining: TimeInterval {
+        let gameTimer = entityComponentManager.getAllComponents(ofType: Lifespan.self)
+        guard let timeRemaining = gameTimer.first?.timeLeft else {
+            return 60
+        }
+        return timeRemaining
+    }
+}

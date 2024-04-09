@@ -146,3 +146,13 @@ extension HostViewModel {
         return shape.halfLength
     }
 }
+
+extension HostViewModel {
+    var timeRemaining: TimeInterval {
+        let gameTimer = gameWorld.entityComponentManager.getAllComponents(ofType: Lifespan.self)
+        guard let timeRemaining = gameTimer.first?.timeLeft else {
+            return 60
+        }
+        return timeRemaining
+    }
+}

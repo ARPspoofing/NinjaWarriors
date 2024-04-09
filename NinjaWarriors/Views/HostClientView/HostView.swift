@@ -23,6 +23,7 @@ struct HostView: View {
     var body: some View {
         ZStack {
             backgroundImage
+            gameTimerView
             closingZoneView
             canvasView
 
@@ -84,6 +85,10 @@ struct HostView: View {
 
     private var closingZoneView: some View {
         ClosingZoneView(circleCenter: viewModel.closingZoneCenter, circleRadius: viewModel.closingZoneRadius)
+    }
+
+    private var gameTimerView: some View {
+        GameTimerView(timeInterval: viewModel.timeRemaining)
     }
 }
 

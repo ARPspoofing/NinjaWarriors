@@ -64,7 +64,8 @@ final class RealTimeManagerAdapter: EntitiesManager {
             "ColliderWrapper": ColliderWrapper.self,
             "ScoreWrapper": ScoreWrapper.self,
             "RigidbodyWrapper": RigidbodyWrapper.self,
-            "EnvironmentEffectWrapper": EnvironmentEffectWrapper.self
+            "EnvironmentEffectWrapper": EnvironmentEffectWrapper.self,
+            "LifespanWrapper": LifespanWrapper.self
         ]
         return wrapperTypes[wrapperType]
     }
@@ -233,7 +234,6 @@ final class RealTimeManagerAdapter: EntitiesManager {
                                    from idData: [String: Any],
                                    into entityComponent: inout [EntityID: [Component]],
                                    for entities: inout [Entity], ref entityInstance: Entity) throws {
-
         for componentType in componentTypes {
             guard let componentWrapper = getComponentWrapperType(of: componentType),
                   let componentDict = idData[componentType],
@@ -291,9 +291,11 @@ final class RealTimeManagerAdapter: EntitiesManager {
                   let componentData = try? JSONEncoder().encode(data),
                   let dataDict = try? JSONSerialization.jsonObject(with: componentData,
                                                                    options: []) as? [String: Any] else {
+                print("continue")
                 continue
             }
             componentDict[key] = dataDict
+            print("did not continue", dataDict)
         }
         return componentDict
     }

@@ -20,10 +20,10 @@ struct ClientView: View {
         self.viewModel = ClientViewModel(matchId: matchId, currPlayerId: currPlayerId)
     }
 
-
     var body: some View {
         ZStack {
             backgroundImage
+            gameTimerView
             closingZoneView
             canvasView
 
@@ -37,7 +37,6 @@ struct ClientView: View {
                 }
         }
     }
-
 
     private var backgroundImage: some View {
         Image("gray-wall")
@@ -80,6 +79,10 @@ struct ClientView: View {
 
     private var closingZoneView: some View {
         ClosingZoneView(circleCenter: viewModel.closingZoneCenter, circleRadius: viewModel.closingZoneRadius)
+    }
+
+    private var gameTimerView: some View {
+        GameTimerView(timeInterval: viewModel.timeRemaining)
     }
 }
 

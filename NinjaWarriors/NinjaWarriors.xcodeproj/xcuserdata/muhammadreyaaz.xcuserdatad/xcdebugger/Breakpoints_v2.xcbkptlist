@@ -32,6 +32,54 @@
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9759D438-CE0A-4503-8C01-2377C609E517"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ECS/Systems/EntityComponentManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "247"
+            endingLineNumber = "247"
+            landmarkName = "remove(entity:isRemoved:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "9759D438-CE0A-4503-8C01-2377C609E517 - 51f2dfcea7ba76ae"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "default argument 1 of NinjaWarriors.EntityComponentManager.remove(entity: NinjaWarriors.Entity, isRemoved: Swift.Bool) -&gt; ()"
+                  moduleName = "NinjaWarriors"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/muhammadreyaaz/Desktop/CS3217/group-project-ninja-warriors/NinjaWarriors/ECS/Systems/EntityComponentManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "201"
+                  endingLineNumber = "201"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  uuid = "9759D438-CE0A-4503-8C01-2377C609E517 - 82bf0692414a1c27"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NinjaWarriors.EntityComponentManager.remove(entity: NinjaWarriors.Entity, isRemoved: Swift.Bool) -&gt; ()"
+                  moduleName = "NinjaWarriors"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/muhammadreyaaz/Desktop/CS3217/group-project-ninja-warriors/NinjaWarriors/ECS/Systems/EntityComponentManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "202"
+                  endingLineNumber = "202"
+                  offsetFromSymbolStart = "76">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.ExceptionBreakpoint">
          <BreakpointContent
             uuid = "5E298D18-815C-47D4-B85C-08D081AB24D6"
@@ -51,22 +99,6 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "16410ACE-AEA4-4EEF-B216-5604DA420B93"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Primitives/Skills/RefreshCooldownsSkill.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
-            landmarkName = "modifyCooldowns(_:in:)"
-            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

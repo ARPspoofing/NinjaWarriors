@@ -61,6 +61,8 @@
 		915BFD142BC1200600AB5815 /* ClientViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915BFD132BC1200600AB5815 /* ClientViewModel.swift */; };
 		915BFD1B2BC149A000AB5815 /* ClientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915BFD1A2BC149A000AB5815 /* ClientView.swift */; };
 		915BFD1D2BC2303800AB5815 /* HostClientObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915BFD1C2BC2303800AB5815 /* HostClientObserver.swift */; };
+		916990FD2BC4CB0D00ED1FBD /* GameTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916990FC2BC4CB0D00ED1FBD /* GameTimer.swift */; };
+		916990FF2BC4CB1700ED1FBD /* GameTimerWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916990FE2BC4CB1700ED1FBD /* GameTimerWrapper.swift */; };
 		916A7D3A2BA1541700319C26 /* NinjaWarriorsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916A7D392BA1541700319C26 /* NinjaWarriorsApp.swift */; };
 		916A7D3C2BA1541700319C26 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916A7D3B2BA1541700319C26 /* ContentView.swift */; };
 		916A7D3E2BA1541800319C26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 916A7D3D2BA1541800319C26 /* Assets.xcassets */; };
@@ -239,6 +241,8 @@
 		915BFD132BC1200600AB5815 /* ClientViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientViewModel.swift; sourceTree = "<group>"; };
 		915BFD1A2BC149A000AB5815 /* ClientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientView.swift; sourceTree = "<group>"; };
 		915BFD1C2BC2303800AB5815 /* HostClientObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostClientObserver.swift; sourceTree = "<group>"; };
+		916990FC2BC4CB0D00ED1FBD /* GameTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTimer.swift; sourceTree = "<group>"; };
+		916990FE2BC4CB1700ED1FBD /* GameTimerWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTimerWrapper.swift; sourceTree = "<group>"; };
 		916A7D362BA1541700319C26 /* NinjaWarriors.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NinjaWarriors.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		916A7D392BA1541700319C26 /* NinjaWarriorsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NinjaWarriorsApp.swift; sourceTree = "<group>"; };
 		916A7D3B2BA1541700319C26 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -429,6 +433,15 @@
 			path = Audio;
 			sourceTree = "<group>";
 		};
+		910CF6612BC4CAAD00C04CF2 /* GameTimer */ = {
+			isa = PBXGroup;
+			children = (
+				916990FC2BC4CB0D00ED1FBD /* GameTimer.swift */,
+				916990FE2BC4CB1700ED1FBD /* GameTimerWrapper.swift */,
+			);
+			path = GameTimer;
+			sourceTree = "<group>";
+		};
 		9132AF602BA50E46000F2AC4 /* PhysicsSystem */ = {
 			isa = PBXGroup;
 			children = (
@@ -505,8 +518,9 @@
 				91DDE65A2BB51D8800851603 /* AnyEntity.swift */,
 				7181B14B2BC047FE009711DE /* ClosingZone */,
 				91DDE6612BB79DE200851603 /* Obstacles */,
-				9132AF832BA5A871000F2AC4 /* Players */,
 				91DDE6592BB5122600851603 /* Slash */,
+				9132AF832BA5A871000F2AC4 /* Players */,
+				910CF6612BC4CAAD00C04CF2 /* GameTimer */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -1214,6 +1228,7 @@
 				91DDE66A2BB7C19C00851603 /* HealthWrapper.swift in Sources */,
 				9132AF642BA50E82000F2AC4 /* PhysicsElasticCollision.swift in Sources */,
 				91DDE6652BB7A07100851603 /* ObstacleWrapper.swift in Sources */,
+				916990FD2BC4CB0D00ED1FBD /* GameTimer.swift in Sources */,
 				7181B1482BC0404A009711DE /* EnvironmentEffectWrapper.swift in Sources */,
 				916A7DAC2BA3FD4800319C26 /* LineWrapper.swift in Sources */,
 				E6FD345F2BC1545600477B1F /* LifespanSystem.swift in Sources */,
@@ -1259,6 +1274,7 @@
 				9132AF7E2BA59FE5000F2AC4 /* MatchPublisher.swift in Sources */,
 				91DDE6682BB7BFE100851603 /* Health.swift in Sources */,
 				9132AF6C2BA57130000F2AC4 /* EntitiesManager.swift in Sources */,
+				916990FF2BC4CB1700ED1FBD /* GameTimerWrapper.swift in Sources */,
 				E6DB87112BB9F7BA003AC063 /* DodgeWrapper.swift in Sources */,
 				E6FD345B2BC1525300477B1F /* Lifespan.swift in Sources */,
 				E63FFC012BBADA55006C2C4C /* Transform.swift in Sources */,

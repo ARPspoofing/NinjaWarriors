@@ -54,7 +54,18 @@ class RigidbodyHandler: System, PhysicsRigidBody, PhysicsElasticCollision {
                 continue
             }
 
-            let playerInput = rigidBody.angularVelocity
+            var playerInput: Vector
+
+            if rigidBody.angularVelocity == Vector.zero {
+                guard let gameControl = gameControl,
+                      let gameControlEntity = gameControl.entity,
+                      rigidBody.entity.id == gameControlEntity.id else {
+                    continue
+                }
+                playerInput = gameControl.getInput()
+            } else {
+                playerInput = rigidBody.angularVelocity
+            }
 
             if !collider.isColliding && !collider.isOutOfBounds {
                 rigidBody.velocity = playerInput

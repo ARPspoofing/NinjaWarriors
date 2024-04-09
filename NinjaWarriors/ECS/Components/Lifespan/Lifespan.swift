@@ -11,6 +11,10 @@ class Lifespan: Component {
     let lifespan: TimeInterval
     var elapsedTime: TimeInterval
 
+    var timeLeft: TimeInterval {
+        return max(0, lifespan - elapsedTime)
+    }
+
     init(id: ComponentID, entity: Entity, lifespan: TimeInterval, elapsedTime: TimeInterval = 0) {
         self.lifespan = lifespan
         self.elapsedTime = elapsedTime

@@ -58,7 +58,7 @@ final class ClientViewModel: ObservableObject, HostClientObserver  {
         }
         for entityIdComponent in entityIdComponents {
             if let entityIdComponent = entityIdComponent as? Rigidbody {
-                entityIdComponent.angularVelocity = Vector(horizontal: vector.dx, vertical: vector.dy)
+                entityIdComponent.angularVelocity = Vector(horizontal: vector.dx / 3, vertical: vector.dy / 3)
             }
         }
         Task {

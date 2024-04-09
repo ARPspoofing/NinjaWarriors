@@ -40,9 +40,9 @@ class GameWorld {
         systemManager.add(system: healthManager)
         systemManager.add(system: scoreManager)
         systemManager.add(system: dodgeManager)
-        systemManager.add(system: destroyManager)
         systemManager.add(system: environmentEffectSystem)
         systemManager.add(system: lifespanManager)
+        systemManager.add(system: destroyManager)
     }
 
     func setInput(_ vector: CGVector, for entity: Entity) {

@@ -71,6 +71,8 @@ final class LobbyViewModel: ObservableObject {
         initPlayers(ids: playerIds)
 
         addClosingZone(center: Constants.closingZonePosition, radius: Constants.closingZoneRadius)
+
+        addGameTimer()
     }
 
     func selectHost(from ids: [String]?) {
@@ -173,6 +175,23 @@ final class LobbyViewModel: ObservableObject {
 
     private func makeClosingZone(center: Point, radius: Double) -> ClosingZone {
         ClosingZone(id: RandomNonce().randomNonceString(), center: center, initialRadius: radius)
+    }
+
+    private func addGameTimer() {
+        let gameTimer: GameTimer = makeGameTimer()
+        let components = [Lifespan(id: RandomNonce().randomNonceString(),
+                                   entity: gameTimer, lifespan: 60.0)]
+
+        guard let realTimeManager = realTimeManager else {
+            return
+        }
+        Task {
+            try? await realTimeManager.uploadEntity(entity: gameTimer, components: components)
+        }
+    }
+
+    private func makeGameTimer() -> GameTimer {
+        GameTimer(id: RandomNonce().randomNonceString())
     }
 
     func addListenerForMatches() {
